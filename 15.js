@@ -4,14 +4,30 @@
 
 const prompt = require('prompt-sync')();
 
-function naturalNumbers() {
-    let num1 = parseInt(prompt("Ingrese el primer número: "));
-    let num2 = parseInt(prompt("Ingrese el segundo número: "));
+function greaterOrLesser(){
+    let greater = -Infinity;
+    let lesser = Infinity;
+    for(let i=1; i<=2; i++){
+        number = prompt("ingresa un numero: ");
+        greater = number;
+        
+        if(number > greater){
+            greater = number;
+        }
+        if(number < lesser){
+            lesser = number;
+        }
+    }
+    return {lesser: lesser, greater: greater};
+}
+
+
+function naturalNumbers(n1, n2) {
     let count = 0;
     let countEvens= 0;
     let sumOdds = 0;
-    let lesser = Math.min(num1, num2);
-    let greater = Math.max(num1, num2);
+    let lesser = n1;
+    let greater = n2;
   
     for (let i = lesser; i <= greater; i++) {
       console.log(i);
@@ -27,5 +43,7 @@ function naturalNumbers() {
     console.log("Hay " + countEvens + " números pares entre " + lesser + " y " + greater);
     console.log("La suma de los números impares es " + sumOdds);
   }
-  
-naturalNumbers();
+let res = greaterOrLesser();
+let n1 = parseInt(res.lesser);
+let n2 = parseInt(res.greater);
+naturalNumbers(n1,n2);
