@@ -5,6 +5,7 @@ Docente: Ing. Luis Antonio Ramirez Martinez
 
 Problemas:
 1.- Hacer un programa que imprima los números del 1 al 100.
+
 2.- Hacer un programa que imprima los números del 100 al 0, en orden decreciente.
 3.- Hacer un programa que imprima los números pares entre 0 y 100.
 4.- Hacer un programa que imprima la suma de los 100 primeros números.
