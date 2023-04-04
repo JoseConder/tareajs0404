@@ -16,6 +16,7 @@ function addText(){
     fs.appendFile('DATOS.DAT', text, function(err) {
         if (err) throw err;
         console.log('Se agregó la nueva línea de texto al archivo');
+    menu();
     });
 }
 
@@ -33,6 +34,7 @@ function deleteText(){
         if (err) throw err;
         console.log(`La frase "${palabra}" fue eliminada del archivo "${archivo}"`);
         });
+    menu();
     });
 }
 
